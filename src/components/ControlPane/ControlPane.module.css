@@ -1,4 +1,14 @@
 .controlPane {
+  width: 85%;
+}
+
+@media screen and (min-width: 426px) {
+  .controlPane {
+    width: auto;
+  }
+}
+
+.controlPane {
   padding: 24px;
   /* Optical centering */
   padding-top: 18px;

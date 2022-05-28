@@ -1,13 +1,40 @@
 .characterEditor {
-  padding-top: 128px;
-  padding-bottom: 64px;
+  padding-top: 48px;
+}
+
+@media screen and (min-width: 426px) {
+  .characterEditor {
+    isolation: isolate;
+    padding-top: 128px;
+    padding-bottom: 64px;
+  }
 }
 
 .maxWidthWrapper {
+  position: absolute;
+  bottom: 10%;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media screen and (min-width: 426px) {
+  .maxWidthWrapper {
+    position: static;
+    overflow: initial;
+    width: auto;
+  }
 }
 
 .header {
-  padding-bottom: 64px;
+  display: none;
+}
+
+@media screen and (min-width: 426px) {
+  .header {
+    display: block;
+    padding-bottom: 64px;
+    width: 65%;
+  }
 }
 
 .title {
@@ -26,5 +53,36 @@
 .characterWrapper {
 }
 
+@media screen and (min-width: 426px) {
+  .characterWrapper {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    height: 80%;
+    min-height: 500px;
+    left: 0;
+    margin: auto;
+    right: -45%;
+  }
+}
+
 .controlColumn {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  margin-left: -32px;
+  margin-right: -32px;
+}
+
+@media screen and (min-width: 426px) {
+  .controlColumn {
+    display: block;
+    overflow: visible;
+    gap: none;
+    width: 50%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
